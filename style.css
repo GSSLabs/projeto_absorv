@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #f8c8dc 100%
+    );
+    text-align: center;
+    font-size: medium;
+    
+
+}
