@@ -1,6 +1,9 @@
 <?php
 session_start();
-include_once("../conexao.php")
+include_once("../conexao.php");
+
+error_reporting(E_ALL);
+ini_set('display_errors',1);
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +13,7 @@ include_once("../conexao.php")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Gstyle.css">
 </head>
 
 <body>
@@ -29,11 +32,22 @@ include_once("../conexao.php")
 
         ?>
     </div><br>
-    <div class="acoes">
-        <a href=""><button>térreo</button></a>
-        <a href=""><button>Andar 1</button></a>
-        <a href=""><button>Andar 2</button></a>
-        <a href=""><button>Andar 3</button></a>
+    <div class="card">
+        <form action="./user_pro.php" method="post">
+            <label>escolha o local :</label>
+            <div class="acoes">
+                <select id="local" name="local">
+                    <option value="banheiro_Terreo">Térreo</option>
+                    <option value="banheiro_andar_1">Andar 1</option>
+                    <option value="banheiro_andar_2">Andar 2</option>
+                    <option value="banheiro_andar_3">Andar 3</option>
+                </select>
+            </div>
+            <label>quantidade retirada :</label>
+            <div class="acoes">
+                <input type="number" min="1" id="quantidade" name="quantidade"><button type="submit">OK</button>
+            </div>
+        </form>
     </div>
 </body>
 
