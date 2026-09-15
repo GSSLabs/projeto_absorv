@@ -19,7 +19,7 @@ mysqli_begin_transaction($conn);
 try {
 
     $sql = "INSERT INTO movimentacoes (quantidade,tipo,data_hora,fk_banheiro_id)
-            VALUES ('$quant','retira',now(),'$id_banheiro')";
+            VALUES ('$quant','retira','$data_hora','$id_banheiro')";
 
     if (!mysqli_query($conn, $sql)) {
         throw new Exception(mysqli_error($conn));
@@ -27,7 +27,8 @@ try {
 
     $sql = "UPDATE banheiro
             SET estoque = estoque - $quant
-            WHERE id = '$id_banheiro'";
+            WHERE id = '$id_banheiro'
+            and estoque >='$quant'";
 
     if (!mysqli_query($conn, $sql)) {
         throw new Exception(mysqli_error($conn));

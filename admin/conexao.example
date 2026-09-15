@@ -1,0 +1,13 @@
+<?php
+$servidor ="nome_servidor";
+$user = "nome_usuario";
+$senha = "senha_banco";
+$banco = "nome_banco";
+
+$conn= mysqli_connect($servidor,$user,$senha,$banco);
+
+if(!$conn){
+    die("erro de conexão : ".mysqli_connect_error());
+}
+
+?>

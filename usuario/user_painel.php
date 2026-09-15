@@ -7,7 +7,7 @@ ini_set('display_errors',1);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -45,10 +45,11 @@ ini_set('display_errors',1);
             </div>
             <label>quantidade retirada :</label>
             <div class="acoes">
-                <input type="number" min="1" id="quantidade" name="quantidade"><button type="submit">OK</button>
+                <input type="number" min="1" id="quantidade" name="quantidade"><br><br><button type="submit">OK</button>
             </div>
         </form>
-    </div>
+    </div><br>
+    <center><a href="../index.html"><button class="botao">voltar</button></a></center>
 </body>
 
 </html>
