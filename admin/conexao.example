@@ -1,0 +1,13 @@
+<?php
+$servidor ="localhost";
+$user = "root";
+$senha = "";
+$banco = "banco_absorv";
+
+$conn= mysqli_connect($servidor,$user,$senha,$banco);
+
+if(!$conn){
+    die("erro de conexão : ".mysqli_connect_error());
+}
+
+?>
